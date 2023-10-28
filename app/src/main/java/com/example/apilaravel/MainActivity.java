@@ -22,4 +22,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(irformulario);
 
     }
+
+    public void regresarMenu(View view) {
+        Intent regresarmenu = new Intent(this, Login.class);
+        startActivity(regresarmenu);
+    }
+
 }

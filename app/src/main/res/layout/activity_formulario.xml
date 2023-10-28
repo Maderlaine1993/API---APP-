@@ -100,7 +100,7 @@
         tools:layout_editor_absoluteX="-2dp" />
 
     <EditText
-        android:id="@+id/edtDepartamento"
+        android:id="@+id/edtConfirmarContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

@@ -49,7 +49,7 @@ public class FormularioActivity extends AppCompatActivity {
         edtTelefono = findViewById(R.id.edtTelefono);
         edtCorreo = findViewById(R.id.edtCorreo);
         edtDireccion = findViewById(R.id.edtDireccion);
-        edtDepartamento = findViewById(R.id.edtDepartamento);
+        edtDepartamento = findViewById(R.id.edtConfirmarContraseña);
         btnEditar = findViewById(R.id.btnEditar);
         btnVisualizar = findViewById(R.id.btnVisualizar);
         btnEliminar = findViewById(R.id.btnEliminar);
@@ -59,21 +59,21 @@ public class FormularioActivity extends AppCompatActivity {
         btnEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editarEmpleado("http://18.222.133.79/api/edit-empleados/31?codigo_empleado=55&nombre_empleado=prueba por favor&numero_telefono=654321&correo=pruebafunciona@gmail.com&direccion=Puerto Barrios&departamento=Guatemala&control=api");
+                editarEmpleado("http://3.21.122.142/api/edit-empleados/33?codigo_empleado=55&nombre_empleado=prueba por favor&numero_telefono=654321&correo=pruebafunciona@gmail.com&direccion=Puerto Barrios&departamento=Guatemala&control=api");
             }
         });
 
         btnVisualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                visualizarEmpleados("http://18.222.133.79/api/get-empleados");
+                visualizarEmpleados("http://3.21.122.142/api/get-empleados"+edtCodigo.getText()+"");
             }
         });
 
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                eliminarEmpleado("http://18.222.133.79/api/delete-empleados/31");
+                eliminarEmpleado("http://3.21.122.142/api/delete-empleados/33");
             }
 
         });
@@ -81,14 +81,14 @@ public class FormularioActivity extends AppCompatActivity {
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                crearEmpleado("http://18.222.133.79/api/save-empleados");
+                crearEmpleado("http://3.21.122.142/api/save-empleados");
             }
         });
 
     btnBuscar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            buscarEmpleado("http://18.222.133.79/api/get-empleados/15");
+            buscarEmpleado("http://3.21.122.142/api/get-empleados/" +edtCodigo.getText()+"");
         }
     });
 }
